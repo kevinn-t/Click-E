@@ -1,4 +1,4 @@
 # Click-E
-##An autoclicker for the keyboard with a quick and dirty GUI.
+An autoclicker for the keyboard with a quick and dirty GUI.
 
-###GUI made using tkinter, clicking functionality made using pyautogui.
+GUI made using tkinter, clicking functionality made using pyautogui.
