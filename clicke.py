@@ -72,7 +72,7 @@ for key in keys:
         controll = Button(keyboardApp, text = 'rSlhift', width = 5, relief = 'ridge', padx = 4, pady = 4, command = command).grid(row = 5, column = 0)
     #normal characters
     else:
-	    notSpecial = Button(keyboardApp, text = key, width = 5, relief = 'ridge', padx = 4, pady = 4, command = command).grid(row = varRow, column = varCol)
+	notSpecial = Button(keyboardApp, text = key, width = 5, relief = 'ridge', padx = 4, pady = 4, command = command).grid(row = varRow, column = varCol)
     
     #this makes sure the 'keyboard' isn't a straight line
     varCol += 1
