@@ -61,15 +61,15 @@ for key in keys:
     elif key == 'altright':
         altr = Button(keyboardApp, text = 'rAlt', width = 5, relief = 'ridge', padx = 4, pady = 4, command = command).grid(row = 6, column = 9)
     elif key == 'altleft':
-        altr = Button(keyboardApp, text = 'lAlt', width = 5, relief = 'ridge', padx = 4, pady = 4, command = command).grid(row = 6, column = 1)
+        altl = Button(keyboardApp, text = 'lAlt', width = 5, relief = 'ridge', padx = 4, pady = 4, command = command).grid(row = 6, column = 1)
     elif key == 'controlright':
         controlr = Button(keyboardApp, text = 'rCtrl', width = 5, relief = 'ridge', padx = 4, pady = 4, command = command).grid(row = 6, column = 10)
     elif key == 'controlleft':
         controll = Button(keyboardApp, text = 'lCtrl', width = 5, relief = 'ridge', padx = 4, pady = 4, command = command).grid(row = 6, column = 0)
     elif key == 'shiftright':
-        controll = Button(keyboardApp, text = 'rShift', width = 5, relief = 'ridge', padx = 4, pady = 4, command = command).grid(row = 5, column = 12)
+        shiftr = Button(keyboardApp, text = 'rShift', width = 5, relief = 'ridge', padx = 4, pady = 4, command = command).grid(row = 5, column = 12)
     elif key == 'shiftleft':
-        controll = Button(keyboardApp, text = 'rSlhift', width = 5, relief = 'ridge', padx = 4, pady = 4, command = command).grid(row = 5, column = 0)
+        shiftl = Button(keyboardApp, text = 'rSlhift', width = 5, relief = 'ridge', padx = 4, pady = 4, command = command).grid(row = 5, column = 0)
     #normal characters
     else:
 	notSpecial = Button(keyboardApp, text = key, width = 5, relief = 'ridge', padx = 4, pady = 4, command = command).grid(row = varRow, column = varCol)
