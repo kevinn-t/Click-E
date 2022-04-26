@@ -20,6 +20,11 @@ keyboardApp = Tk()
 keyboardApp.title('Click-E')
 keyboardApp.geometry('813x250+550+370')
 
+run = True
+def stop():
+    run = False
+kill = Button(keyboardApp, text = 'End', width = 5, relief = 'ridge', padx = 4, pady = 4, command = stop).grid(row = 6, column = 11)
+
 #making an entry
 entry = Entry(keyboardApp, width = 85)
 entry.grid(row = 0, column = 0, columnspan = 12)
@@ -32,13 +37,14 @@ def select(value):
 
 #hold / click
 def spam():
-    while True:
+    while run:
         for ele in inputedKeys:
             pag.press(ele)
     inputedKeys.clear()
 def hold():
-    for ele in inputedKeys:
-        pag.keyDown(ele)
+    while run:
+        for ele in inputedKeys:
+            pag.keyDown(ele)
     inputedKeys.clear()
 
 spamClick = Button(keyboardApp, text = 'Spam', width = 5, relief = 'ridge', padx = 4, pady = 4, command = spam).grid(column = 12, row = 0)
@@ -61,7 +67,7 @@ for key in keys:
     elif key == 'altright':
         altr = Button(keyboardApp, text = 'rAlt', width = 5, relief = 'ridge', padx = 4, pady = 4, command = command).grid(row = 6, column = 9)
     elif key == 'altleft':
-        altl = Button(keyboardApp, text = 'lAlt', width = 5, relief = 'ridge', padx = 4, pady = 4, command = command).grid(row = 6, column = 1)
+        altr = Button(keyboardApp, text = 'lAlt', width = 5, relief = 'ridge', padx = 4, pady = 4, command = command).grid(row = 6, column = 1)
     elif key == 'controlright':
         controlr = Button(keyboardApp, text = 'rCtrl', width = 5, relief = 'ridge', padx = 4, pady = 4, command = command).grid(row = 6, column = 10)
     elif key == 'controlleft':
@@ -72,7 +78,7 @@ for key in keys:
         shiftl = Button(keyboardApp, text = 'rSlhift', width = 5, relief = 'ridge', padx = 4, pady = 4, command = command).grid(row = 5, column = 0)
     #normal characters
     else:
-	notSpecial = Button(keyboardApp, text = key, width = 5, relief = 'ridge', padx = 4, pady = 4, command = command).grid(row = varRow, column = varCol)
+	    notSpecial = Button(keyboardApp, text = key, width = 5, relief = 'ridge', padx = 4, pady = 4, command = command).grid(row = varRow, column = varCol)
     
     #this makes sure the 'keyboard' isn't a straight line
     varCol += 1
